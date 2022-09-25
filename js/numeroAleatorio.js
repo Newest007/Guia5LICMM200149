@@ -21,7 +21,7 @@ function generarNumeroAleatorio() {
         } else if(intentos == numeroAleatorio) {
             mensaje = `su número de intentos ha terminado. El número oculto era: ${numeroAleatorio}. Refresque la página para volver a jugar`
         } else {
-            mensaje = `Vuelve a intentar. Qedan ${numeroIntentos - intentos} intentos`;
+            mensaje = `Vuelve a intentar. Quedan ${numeroIntentos - intentos} intentos`;
         }
 
         //Aumentamos el valor de los intentos
@@ -31,4 +31,14 @@ function generarNumeroAleatorio() {
     }
     
     parrafo.innerHTML= mensaje;
+}
+
+function convertirCelsiusFahrenheit() {
+    let valor = prompt("Coloque el número en °C que desea convertir a °F");
+
+    let resultado = (valor*(9/5)) + 32;
+
+    const parrafo = document.querySelector("#idParrafo");
+
+    parrafo.innerHTML =`${valor}°C a °F es: ${resultado}°F`;
 }
